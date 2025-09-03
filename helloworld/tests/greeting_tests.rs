@@ -1,4 +1,4 @@
-use hello_world::get_greeting;
+use helloworld::get_greeting;
 
 #[test]
 fn test_get_greeting() {
