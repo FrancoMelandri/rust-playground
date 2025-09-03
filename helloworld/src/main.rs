@@ -1,5 +1,5 @@
 use helloworld::get_greeting;
-use std::env::{args, Args};
+use std::env::{Args, args};
 
 fn main() {
     let mut args: Args = args();
