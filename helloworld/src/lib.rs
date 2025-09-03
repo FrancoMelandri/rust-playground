@@ -1,3 +1,3 @@
-pub fn get_greeting() -> String {
-    String::from("Hello, world!")
+pub fn get_greeting(name: String) -> String {
+    format!("Hello, {}!", name)
 }
