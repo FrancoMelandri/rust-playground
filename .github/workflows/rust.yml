@@ -35,20 +35,20 @@ jobs:
 
     - name: Build
       run: |
-        cd hello_world
+        cd helloworld
         cargo build --verbose
 
     - name: Run tests
       run: |
-        cd hello_world
+        cd helloworld
         cargo test --verbose
 
     - name: Check formatting
       run: |
-        cd hello_world
+        cd helloworld
         cargo fmt -- --check
 
     - name: Run clippy
       run: |
-        cd hello_world
+        cd helloworld
         cargo clippy -- -D warnings
