@@ -1,5 +1,5 @@
-use helloworld::get_greeting;
 use helloworld::Arguments;
+use helloworld::get_greeting;
 
 #[test]
 fn test_get_greeting() {
