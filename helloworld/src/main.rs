@@ -1,6 +1,6 @@
-use helloworld::get_greeting;
-use helloworld::get_args;
 use helloworld::Arguments;
+use helloworld::get_args;
+use helloworld::get_greeting;
 
 fn main() {
     let args: Arguments = get_args();

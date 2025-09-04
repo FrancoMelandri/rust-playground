@@ -1,24 +1,31 @@
-
 pub fn get_greeting(args: Arguments) -> String {
     format!("Hello, {}!", args.name)
 }
 
 pub fn get_args() -> Arguments {
-    Arguments::create(std::env::args().nth(1).unwrap_or_else(|| String::from("world")))
+    Arguments::create(
+        std::env::args()
+            .nth(1)
+            .unwrap_or_else(|| String::from("world")),
+    )
 }
 
 #[derive(Debug)]
 pub struct Arguments {
-    pub name: String
+    pub name: String,
 }
 
 impl Arguments {
     pub fn new() -> Self {
-        Arguments { name: String::new() }
+        Arguments {
+            name: String::new(),
+        }
     }
 
     pub fn from(name: &str) -> Self {
-        Arguments { name: name.to_owned() }
+        Arguments {
+            name: name.to_owned(),
+        }
     }
 
     pub fn create(name: String) -> Self {
