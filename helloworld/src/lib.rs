@@ -8,7 +8,7 @@ pub fn get_args() -> Arguments {
 
 #[derive(Debug)]
 pub enum Errors {
-    NoArguments,
+    NoArguments(u32),
 }
 
 #[derive(Debug)]
