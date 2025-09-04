@@ -6,8 +6,13 @@ pub fn get_args() -> Arguments {
     Arguments::create(
         std::env::args()
             .nth(1)
-            .unwrap_or_else(|| String::from("world")),
+            .unwrap_or_else(|| String::new()),
     )
+}
+
+#[derive(Debug)]
+pub enum Errors {
+    NoArguments,
 }
 
 #[derive(Debug)]
