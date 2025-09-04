@@ -15,6 +15,12 @@ pub struct Arguments {
     pub name: String,
 }
 
+impl Default for Arguments {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl Arguments {
     pub fn new() -> Self {
         Arguments {
@@ -29,6 +35,6 @@ impl Arguments {
     }
 
     pub fn create(name: String) -> Self {
-        Arguments { name: name }
+        Arguments { name }
     }
 }
