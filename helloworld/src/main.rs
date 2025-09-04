@@ -1,9 +1,9 @@
+use helloworld::Arguments;
+use helloworld::get_args;
 use helloworld::get_greeting;
-use std::env::{Args, args};
 
 fn main() {
-    let mut args: Args = args();
+    let args: Arguments = get_args();
 
-    let name = args.nth(1).unwrap_or_else(|| String::from("world"));
-    println!("{}", get_greeting(name));
+    println!("{}", get_greeting(args));
 }
