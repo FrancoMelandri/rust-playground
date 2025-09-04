@@ -21,7 +21,7 @@ mod args_tests {
     #[test]
     fn test_arguments_debug() {
         let args = Arguments::from("test");
-        let debug_output = format!("{:?}", args);
+        let debug_output = format!("{args:?}");
         assert!(debug_output.contains("test"));
     }
 }

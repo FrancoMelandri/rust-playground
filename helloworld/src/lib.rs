@@ -3,7 +3,7 @@ pub fn get_greeting(args: Arguments) -> String {
 }
 
 pub fn get_args() -> Arguments {
-    Arguments::create(std::env::args().nth(1).unwrap_or_else(|| String::new()))
+    Arguments::create(std::env::args().nth(1).unwrap_or_default())
 }
 
 #[derive(Debug)]
