@@ -1,3 +1,5 @@
+use clap::{Parser, Subcommand};
+
 pub fn get_greeting(args: Arguments) -> String {
     format!("Hello, {}!", args.name)
 }
@@ -9,6 +11,10 @@ pub fn get_args() -> Arguments {
 #[derive(Debug)]
 pub enum Errors {
     NoArguments(u32),
+}
+
+#[derive(Parser)]
+pub struct Cli {
 }
 
 #[derive(Debug)]

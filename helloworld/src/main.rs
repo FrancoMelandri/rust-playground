@@ -2,7 +2,7 @@ use helloworld::{Arguments, Errors, Stopwatch, get_args, get_greeting};
 
 fn main() -> Result<(), Errors> {
     const WRONG_ARG_ID: u32 = 1;
-    let sw: Stopwatch = Stopwatch::start();
+    let sw: Stopwatch = Stopwatch::start("hello_sw");
     let args: Arguments = get_args();
 
     match args.name.is_empty() {
